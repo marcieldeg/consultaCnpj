@@ -2,53 +2,219 @@
 Consulta CNPJ diretamente ao site da Receita.
 
 Exemplo de retorno:
-`
+<pre>
 {
 	"status": "SUCCESS",
 	"message": "OK",
 	"result": {
-		"02880511000251": {
-			"inscricao": "02.880.511/0002-51",
-			"matriz": false,
-			"dataAbertura": "2009-04-23",
-			"nomeEmpresarial": "COMERCIAL YOHANA LTDA",
-			"nomeFantasia": "********",
-			"porte": "ME",
-			"atividadePrincipal": null,
-			"atividadesSecundarias": [],
-			"naturezaJuridica": null,
-			"endereco": {
-				"logradouro": "********",
-				"numero": "********",
-				"complemento": "********",
-				"cep": "********",
-				"bairro": "********",
-				"municipio": "********",
-				"uf": "********"
+		"00000000000191": {
+			"inscricao": "00.000.000/0001-91",
+			"matriz": true,
+			"dataAbertura": "1966-08-01",
+			"nomeEmpresarial": "BANCO DO BRASIL SA",
+			"nomeFantasia": "DIRECAO GERAL",
+			"porte": "DEMAIS",
+			"atividadePrincipal": {
+				"codigo": "64.22-1-00",
+				"descricao": "Bancos múltiplos, com carteira comercial"
 			},
-			"email": "nastel@nastel.com.br",
-			"telefones": ["(47) 3339-4988", "(47) 9136-0000"],
-			"efr": "*****",
+			"atividadesSecundarias": [{
+					"codigo": "64.99-9-99",
+					"descricao": "Outras atividades de serviços financeiros não especificadas anteriormente"
+				}
+			],
+			"naturezaJuridica": {
+				"codigo": "64.22-1-00",
+				"descricao": "Bancos múltiplos, com carteira comercial"
+			},
+			"endereco": {
+				"logradouro": "Q SAUN QUADRA 5 LOTE B TORRES I, II E III",
+				"numero": "SN",
+				"complemento": "ANDAR 1 A 16 SALA 101 A 1601 ANDAR 1 A 16 SALA 101 A 1601 ANDAR 1 A 16 SALA 101 A 1601",
+				"cep": "70.040-912",
+				"bairro": "ASA NORTE",
+				"municipio": "BRASILIA",
+				"uf": "DF"
+			},
+			"email": "SECEX@BB.COM.BR",
+			"telefones": ["(61) 3493-9002"],
+			"efr": "UNIÃO",
 			"situacaoCadastral": {
-				"situacao": "BAIXADA",
-				"data": "2016-01-28",
-				"motivo": "EXTINCAO P/ ENC LIQ VOLUNTARIA"
+				"situacao": "ATIVA",
+				"data": "2005-11-03",
+				"motivo": ""
 			},
 			"situacaoEspecial": {
 				"situacao": "********",
 				"data": null
 			},
-			"capitalSocial": 5000.00,
+			"capitalSocial": 67000000000.00,
 			"qsa": [{
-					"nome": "ARLETE GUSAVA",
-					"qualificacao": "49-Sócio-Administrador"
+					"nome": "MARCIO HAMILTON FERREIRA",
+					"qualificacao": "10-Diretor"
 				}, {
-					"nome": "DOUGLAS MICHAEL GIRARDI",
-					"qualificacao": "49-Sócio-Administrador"
+					"nome": "NILSON MARTINIANO MOREIRA",
+					"qualificacao": "10-Diretor"
+				}, {
+					"nome": "WALTER MALIENI JUNIOR",
+					"qualificacao": "10-Diretor"
+				}, {
+					"nome": "CARLOS ALBERTO ARAUJO NETTO",
+					"qualificacao": "10-Diretor"
+				}, {
+					"nome": "ANTONIO MAURICIO MAURANO",
+					"qualificacao": "10-Diretor"
+				}, {
+					"nome": "MARCELO AUGUSTO DUTRA LABUTO",
+					"qualificacao": "10-Diretor"
+				}, {
+					"nome": "ROGERIO MAGNO PANCA",
+					"qualificacao": "10-Diretor"
+				}, {
+					"nome": "SIMAO LUIZ KOVALSKI",
+					"qualificacao": "10-Diretor"
+				}, {
+					"nome": "TARCISIO HUBNER",
+					"qualificacao": "10-Diretor"
+				}, {
+					"nome": "EDUARDO CESAR PASA",
+					"qualificacao": "10-Diretor"
+				}, {
+					"nome": "MARCIO LUIZ MORAL",
+					"qualificacao": "10-Diretor"
+				}, {
+					"nome": "JOSE EDUARDO MOREIRA BERGO",
+					"qualificacao": "10-Diretor"
+				}, {
+					"nome": "ALEXANDRE ALVES DE SOUZA",
+					"qualificacao": "10-Diretor"
+				}, {
+					"nome": "CICERO PRZENDSIUK",
+					"qualificacao": "10-Diretor"
+				}, {
+					"nome": "EDSON ROGERIO DA COSTA",
+					"qualificacao": "10-Diretor"
+				}, {
+					"nome": "FABIANO MACANHAN FONTES",
+					"qualificacao": "10-Diretor"
+				}, {
+					"nome": "FERNANDO FLORENCIO CAMPOS",
+					"qualificacao": "10-Diretor"
+				}, {
+					"nome": "GUSTAVO DE SOUZA FOSSE",
+					"qualificacao": "10-Diretor"
+				}, {
+					"nome": "MARCO TULIO DE OLIVEIRA MENDONCA",
+					"qualificacao": "10-Diretor"
+				}, {
+					"nome": "MARVIO MELO FREITAS",
+					"qualificacao": "10-Diretor"
+				}, {
+					"nome": "REINALDO KAZUFUMI YOKOYAMA",
+					"qualificacao": "10-Diretor"
+				}, {
+					"nome": "JOSE CAETANO DE ANDRADE MINCHILLO",
+					"qualificacao": "10-Diretor"
+				}, {
+					"nome": "CARLOS RENATO BONETTI",
+					"qualificacao": "10-Diretor"
+				}, {
+					"nome": "JOSE EDUARDO PEREIRA FILHO",
+					"qualificacao": "10-Diretor"
+				}, {
+					"nome": "MARCO TULIO MORAES DA COSTA",
+					"qualificacao": "10-Diretor"
+				}, {
+					"nome": "JOAO PINTO RABELO JUNIOR",
+					"qualificacao": "10-Diretor"
+				}, {
+					"nome": "CARLOS HAMILTON VASCONCELOS ARAUJO",
+					"qualificacao": "10-Diretor"
+				}, {
+					"nome": "LUCINEIA POSSAR",
+					"qualificacao": "10-Diretor"
+				}, {
+					"nome": "JOSE RICARDO FAGONDE FORNI",
+					"qualificacao": "10-Diretor"
+				}, {
+					"nome": "MARCOS RENATO COLTRI",
+					"qualificacao": "10-Diretor"
+				}, {
+					"nome": "CARLA NESI",
+					"qualificacao": "10-Diretor"
+				}, {
+					"nome": "BERNARDO DE AZEVEDO SILVA ROTHE",
+					"qualificacao": "10-Diretor"
+				}, {
+					"nome": "ANTONIO GUSTAVO MATOS DO VALE",
+					"qualificacao": "10-Diretor"
+				}, {
+					"nome": "LUIZ CLAUDIO BATISTA",
+					"qualificacao": "10-Diretor"
+				}, {
+					"nome": "JOSE AVELAR MATIAS LOPES",
+					"qualificacao": "10-Diretor"
+				}, {
+					"nome": "ANA PAULA TEIXEIRA DE SOUSA",
+					"qualificacao": "10-Diretor"
+				}, {
+					"nome": "DELANO VALENTIM DE ANDRADE",
+					"qualificacao": "10-Diretor"
+				}, {
+					"nome": "GERSON EDUARDO DE OLIVEIRA",
+					"qualificacao": "10-Diretor"
+				}, {
+					"nome": "RUBEM DE FREITAS NOVAES",
+					"qualificacao": "16-Presidente"
+				}, {
+					"nome": "PAULA LUCIANA VIANA DA SILVA LIMA MAZANEK",
+					"qualificacao": "10-Diretor"
+				}, {
+					"nome": "CAMILO BUZZI",
+					"qualificacao": "10-Diretor"
+				}, {
+					"nome": "CARLOS MOTTA DOS SANTOS",
+					"qualificacao": "10-Diretor"
+				}, {
+					"nome": "FABIO AUGUSTO CANTIZANI BARBOSA",
+					"qualificacao": "10-Diretor"
+				}, {
+					"nome": "IVANDRE MONTIEL DA SILVA",
+					"qualificacao": "10-Diretor"
+				}, {
+					"nome": "RONALDO SIMON FERREIRA",
+					"qualificacao": "10-Diretor"
+				}, {
+					"nome": "ENIO MATHIAS FERREIRA",
+					"qualificacao": "10-Diretor"
+				}, {
+					"nome": "DANIEL ANDRE STIELER",
+					"qualificacao": "10-Diretor"
+				}, {
+					"nome": "MAURICIO NOGUEIRA",
+					"qualificacao": "10-Diretor"
+				}, {
+					"nome": "THOMPSON SOARES PEREIRA CESAR",
+					"qualificacao": "10-Diretor"
+				}, {
+					"nome": "ERIK DA COSTA BREYER",
+					"qualificacao": "10-Diretor"
+				}, {
+					"nome": "WALDERY RODRIGUES JUNIOR",
+					"qualificacao": "08-Conselheiro de Administração"
+				}, {
+					"nome": "DEBORA CRISTINA FONSECA",
+					"qualificacao": "08-Conselheiro de Administração"
+				}, {
+					"nome": "LUIZ SERAFIM SPINOLA SANTOS",
+					"qualificacao": "08-Conselheiro de Administração"
+				}, {
+					"nome": "PAULO ROBERTO EVANGELISTA DE LIMA",
+					"qualificacao": "08-Conselheiro de Administração"
 				}
 			],
-			"pdf": "JVBERi0xLjcKJeLjz9MKNSAwIG9iago8PC9GaWx0ZXIvRmxhdGVEZWNvZGUvTGVuZ3RoIDI0NzA+PnN0cmVhbQp4nJVay3LkthXd91dgOZPKUMSDBDmrUN3UhKlWs82mppyUNm1LdpTSYyzJTlW+Jt+RnSsLr2YVr7yKK4us8g+5IAASYBO32TNVozmqe+4D9wGA5HeLmKi/z98ueBrJhGRxErGEPCwSKiMqLL7vcJYDTgHwtP+PQ7pffLP4YvHdoNLX0etkuYzYoJLlaSQOTIztT6vWqh6MH1YxuDdW6mHHh5FaV8/DODon6kGfb3msTipmFgslo+JPo1RYfBjj2J7LnlgBV1mvXHkiD+M8TKfvyrRyrezBeGJV+yEfGPLcmFwQX23vw8Fyezn1XNBqz9vF2QUllJH2mwWTSSQEkVkW5TlpbxZv/v62/cuibAdRRiiPEiVME6bUSZlHSdYJN+X2l/N1tSzIRbkqm6KtPhZkVZPzpthV67GmsVEZB42ORVM6WxScRELpRKngEcuIhB9GdFmsil3b1GRTLKt6U6zJqiDbcrerC/KHq+bzCmI8ZpiLoz4K8I1IxiMpQoJpJ5cqOVh3oRVufrkswblVSarNbtlUP/2zJiEbFEpLcpd9IMpINliByklpJxezKMviKKH0LI5j9i6hhzYybYJG0qOiJtI8sa5cVOuqmCiMTliKSKSudDBGmR6ThFTHumahWCWshojiRKe6vtw29cdi05b+gnZwV7VXBSClL6yVCWgs2i2A1aoLaCo2nVFYXCbdrKyKtlAWi/Oyaa+aIhisSKFe0lkJNUZgNhhJxs9iccbiOA+sueBZJJlLCfshYkRUT6vmwwIKiPwV1j2JOLjCWMTVoDU4zeNIbQa7KQ7PsyhhA8dglGM6yjAS2o0UgzGKVtozcBs8oslgREOUobRCi3t+AfY5h5MhzZhdWnQypBLyrCfIpr4sSQkVXe6KBlorPBbiPGLcpeI9C0Vn5KBhymapdP+x/n2xKci6XYWrlcKo5sLlI1VioqYRdVLRQTR3Seal22A0e9aIQSjDZsvxS0GfM5G9JLYh49njud0o2s/t1bpWO2a5a2EQrMtldVlu2ppc68zCfLiASQW7aXH9NrjmrJvcrmI8t7zfeH9j/oQmcuaLBz2AbeOYoFmAbnNyPN3WDQzi4MyBgwnj8yIzmnsfLsvQzANvUzYrLgEdGRYdV1oiohRcEFmUdYPCYJYiBQ19kmcOx2CU01Xb2IrGM83YzsFJnZ3Ok9OCMRRrBKXofuyD0RBj2HZ0Q1HY40x0JxyLwsczpztjaU9ny3+tqg/6XGDPCDD41CG3WhXQmeWy3vx8qU6/26baLKstMn4ZkxHPXO1oiyaw9Rm5OS3qiOMtGhCcTLy6kzhZ7CBWKUnOveIyGE+8MaIRzrCJdvwCOOIcJj7JklnH7UT2p8nJxO+GzO+G1O/IrlxebVY/wua7C2cfipV7JvDsp6mVm5X9QfxI9qcFJ5OZCW+PNRjNP+z8TsFoiGa/N2IgxrDpdv1S2ONMZD/hs45UiRjOO5NtvyngkF7+abgOhk9AUHCMuRrxZMO90cixOH3HyDuye/r67vZmf3NLyodPz7cvvz7f7cn67uHudX+zR+wK9XTF0Xc0yXBXdga1hmiKWe5XhcZ4ko0Rg1CGTarjl4I+ZyLJjM46eRmvldy6/tAUq/qqCV+k4bDOPQ6expiecqhyxI/0LCrYxcbAU7iGOp6a5wUhxRz2wkTMCc2qnh0chyuPTwh7wcRx0S5ADitMU9dfdYlfl/qoHNQPOwNnc6K0+g+jDCuH5PgUpNmYhApR653rDdJgkctwv7EsjbhD6SDK4JxHcTpQDMY50D+COhyNUY5uuVEsBs8Lxvd0pmt25KCkzjft/SnLbBknLJmlGLfwFdOjz0aiIcqwk88NXo5DORyEAnmO6w5CIftj4LLcBos8ySPhyqIDUKT5+MiKTzaHEGp8KuJIMNeF86JqmvpsVe3apkKan0LzJ9kc562NQ/dDTz8lGxHCXqhHmsdE3Rnu+Ht5tamWn7cVMuAYV08hZ8Rotc+O0YzxOTGaMT4jRiFlFHs5ubpAbt6petkwp/qM2tnBJXE+IoQ7gFJEdPzMU93xINuZ7M7BFqYCGViUw21GDhwDUY6da4ZjIc7Rc85SNEIZ5jJvKRbiHAlb7mDGQpyjB5e/Zh2ct2TeasyK3otsXiR2yqOULhAd64nZt6RTUmk5JyXGkmw8OEnvU3bVNEIZdptyVk0ehDOxbSXprCu6EP39tdysyqb8Ca5p67JtfoZRib0Ry6Mkddn4RsallXvcv7ze3v9O/4i+fnqIvnoOm4GZqcwM9GPDfnCohTAu6k34QSiHK06WzYnBKh/cuH4j5PVbAoeb/J3Is+yMmN/kUH/vYvgT2gVy0c1gNCJ72E4R0cAAU++E3LLn7GgL9xQNMYYprZENjecZsV2CcrSZzpGTIjEMawONRLeedctAjGE7z41Ejv2aaEQmZj0tEbR/xlCq96j92/+aNOVuW292P34s11Bm5UWDvLeg6iURd7Xhjak+cnB2+KDeNPOljz0HEXCQcs/yHUTTHcd+hWiMp88YMQhl2HQ5finocw7Tx3M26zkIz/pbq33fTfoX2MgYTVW2HDKaLS77DzHg0P5lgbwzzLTigRB8EJDBfcj1QL9EL8gJYajNSaRzwjDWBrdYdhbTMxbTNPRmiXVTEI/EJixDRMd3TplEKfgMo11foA2GQg/fU2FVYR8YOAZjHFNFIysazzRjOgInaTudJ6cFYyjWCBpL12e9XwZiDNNmXigKe5yJrkvyWZduLvpLxGXdzUrne5M5/ZdQ9VzZUYP3n4itXPllW22WRU22Z6TcLMm6+oJ8rNdXm1Z9M4DeoWHeOIqODVKeZO6mpiFaAzzxy0ZjPKXGiEEow6bQ8UtBnzORUiZnHUjVg1QxGqSw/5VL/EuM7p22w8XzCOJi5lPJ7rmKQzgyRwcPDubo0SiEzLsxejwKY+yEMNS+l4XiCIxGmLzcHVoxRz40MtOk5xiMcUxdjKxoPNOMrXGUpO10npwWjKFYI2gsunOsXwZiDNs4bigKexz/QpASliXqChwoxFx9qGoEk+4xpxIsPj0//bC/eSKfbu/3pHp8eX3+/r//eSKbp+eH/evdD3vSXJyTx38QuA6l/Lfk5pYwqf69uf3b7cNXz0/db2KaRZjF7htZlkRSf8ZaPty93oHNR2DfHb5gYz1TPX71mNR8X8cmrlCWRAVVnyA6LPLvF8QITcRInqbvY/peZMgqUjj6+UFdv7nZv+7JLfnz0/Nercr58/7lf/d3++u3yNoIfR5x9Gx//fbucf8ecTiJRZRmnsNnw6ej/wdC+NE6CmVuZHN0cmVhbQplbmRvYmoKNCAwIG9iago8PC9Db250ZW50cyA1IDAgUi9NZWRpYUJveFswIDAgNTk1IDg0Ml0vUGFyZW50IDIgMCBSL1Jlc291cmNlczw8L0ZvbnQ8PC9GMSA2IDAgUi9GMiA3IDAgUj4+Pj4vVHJpbUJveFswIDAgNTk1IDg0Ml0vVHlwZS9QYWdlPj4KZW5kb2JqCjEgMCBvYmoKPDwvUGFnZXMgMiAwIFIvVHlwZS9DYXRhbG9nPj4KZW5kb2JqCjMgMCBvYmoKPDwvQ3JlYXRpb25EYXRlKEQ6MjAyMDA0MTMxNjAxNTEtMDMnMDAnKS9Nb2REYXRlKEQ6MjAyMDA0MTMxNjAxNTEtMDMnMDAnKS9Qcm9kdWNlcihpVGV4dK4gNy4xLjEwIKkyMDAwLTIwMjAgaVRleHQgR3JvdXAgTlYgXChBR1BMLXZlcnNpb25cKSk+PgplbmRvYmoKNyAwIG9iago8PC9CYXNlRm9udC9UaW1lcy1Cb2xkL0VuY29kaW5nL1dpbkFuc2lFbmNvZGluZy9TdWJ0eXBlL1R5cGUxL1R5cGUvRm9udD4+CmVuZG9iago2IDAgb2JqCjw8L0Jhc2VGb250L1RpbWVzLVJvbWFuL0VuY29kaW5nL1dpbkFuc2lFbmNvZGluZy9TdWJ0eXBlL1R5cGUxL1R5cGUvRm9udD4+CmVuZG9iagoyIDAgb2JqCjw8L0NvdW50IDEvS2lkc1s0IDAgUl0vVHlwZS9QYWdlcz4+CmVuZG9iagp4cmVmCjAgOAowMDAwMDAwMDAwIDY1NTM1IGYgCjAwMDAwMDI2OTUgMDAwMDAgbiAKMDAwMDAwMzA3NyAwMDAwMCBuIAowMDAwMDAyNzQwIDAwMDAwIG4gCjAwMDAwMDI1NTMgMDAwMDAgbiAKMDAwMDAwMDAxNSAwMDAwMCBuIAowMDAwMDAyOTg3IDAwMDAwIG4gCjAwMDAwMDI4OTggMDAwMDAgbiAKdHJhaWxlcgo8PC9JRCBbPGE2OGYxMDc4Y2MxOGZmZWRmMzVjOWI1MWVjYjlhOTljPjxhNjhmMTA3OGNjMThmZmVkZjM1YzliNTFlY2I5YTk5Yz5dL0luZm8gMyAwIFIvUm9vdCAxIDAgUi9TaXplIDg+PgolaVRleHQtNy4xLjEwCnN0YXJ0eHJlZgozMTI4CiUlRU9GCg=="
+			"pdf": "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/63c750KZW5kc3RyZWFtCmVuZG9iago0IDAgb2JqCjw8L0NvbnRlbnRzIDUgMCBSL01lZGlhQm94WzAgMCA1OTUgODQyXS9QYXJlbnQgMiAwIFIvUmVzb3VyY2VzPDwvRm9udDw8L0YxIDYgMCBSL0YyIDcgMCBSPj4+Pi9UcmltQm94WzAgMCA1OTUgODQyXS9UeXBlL1BhZ2U+PgplbmRvYmoKMSAwIG9iago8PC9QYWdlcyAyIDAgUi9UeXBlL0NhdGFsb2c+PgplbmRvYmoKMyAwIG9iago8PC9DcmVhdGlvbkRhdGUoRDoyMDIwMDQxMzE2MjAxOC0wMycwMCcpL01vZERhdGUoRDoyMDIwMDQxMzE2MjAxOC0wMycwMCcpL1Byb2R1Y2VyKGlUZXh0riA3LjEuMTAgqTIwMDAtMjAyMCBpVGV4dCBHcm91cCBOViBcKEFHUEwtdmVyc2lvblwpKT4+CmVuZG9iago3IDAgb2JqCjw8L0Jhc2VGb250L1RpbWVzLUJvbGQvRW5jb2RpbmcvV2luQW5zaUVuY29kaW5nL1N1YnR5cGUvVHlwZTEvVHlwZS9Gb250Pj4KZW5kb2JqCjYgMCBvYmoKPDwvQmFzZUZvbnQvVGltZXMtUm9tYW4vRW5jb2RpbmcvV2luQW5zaUVuY29kaW5nL1N1YnR5cGUvVHlwZTEvVHlwZS9Gb250Pj4KZW5kb2JqCjIgMCBvYmoKPDwvQ291bnQgMS9LaWRzWzQgMCBSXS9UeXBlL1BhZ2VzPj4KZW5kb2JqCnhyZWYKMCA4CjAwMDAwMDAwMDAgNjU1MzUgZiAKMDAwMDAwMjg2NSAwMDAwMCBuIAowMDAwMDAzMjQ3IDAwMDAwIG4gCjAwMDAwMDI5MTAgMDAwMDAgbiAKMDAwMDAwMjcyMyAwMDAwMCBuIAowMDAwMDAwMDE1IDAwMDAwIG4gCjAwMDAwMDMxNTcgMDAwMDAgbiAKMDAwMDAwMzA2OCAwMDAwMCBuIAp0cmFpbGVyCjw8L0lEIFs8NmY2YTg2ZjNhYWU2ZjFkOWEyYWQ4MjUzZTNhNTQ3OWM+PDZmNmE4NmYzYWFlNmYxZDlhMmFkODI1M2UzYTU0NzljPl0vSW5mbyAzIDAgUi9Sb290IDEgMCBSL1NpemUgOD4+CiVpVGV4dC03LjEuMTAKc3RhcnR4cmVmCjMyOTgKJSVFT0YK"
 		}
 	}
 }
-`
+</pre>
