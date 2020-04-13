@@ -17,7 +17,6 @@ import java.util.Locale;
 import java.util.Objects;
 import java.util.stream.Collectors;
 
-import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
@@ -35,7 +34,7 @@ import io.degasperi.cnpj.classes.Cnpj.Socio;
 import io.degasperi.cnpj.exceptions.InscricaoNaoEncontradaException;
 
 public class HtmlParser {
-	public static Cnpj parse(String mainPage, String qsaPage) throws InscricaoNaoEncontradaException {
+	public static Cnpj parse(Document mainPage, Document qsaPage) throws InscricaoNaoEncontradaException {
 		final Cnpj cnpj = new Cnpj();
 		parseMainPage(cnpj, mainPage);
 		parseQsaPage(cnpj, qsaPage);
@@ -43,9 +42,8 @@ public class HtmlParser {
 		return cnpj;
 	}
 
-	private static void makePdf(Cnpj cnpj, String mainPage) {
-		final Document document = Jsoup.parse(mainPage);
-		final Element principal = document.getElementById("principal");
+	private static void makePdf(Cnpj cnpj, Document mainPage) {
+		final Element principal = mainPage.getElementById("principal");
 
 		try (ByteArrayInputStream is = new ByteArrayInputStream(principal.toString().getBytes());
 				ByteArrayOutputStream os = new ByteArrayOutputStream()) {
@@ -58,14 +56,12 @@ public class HtmlParser {
 		}
 	}
 
-	private static void parseMainPage(Cnpj cnpj, String mainPage) throws InscricaoNaoEncontradaException {
-		final Document document = Jsoup.parse(mainPage);
-
-		final Elements errors = document.getElementsByClass("alert alert-danger");
+	private static void parseMainPage(Cnpj cnpj, Document mainPage) throws InscricaoNaoEncontradaException {
+		final Elements errors = mainPage.getElementsByClass("alert alert-danger");
 		if (!errors.isEmpty())
 			throw new InscricaoNaoEncontradaException(errors.get(0).getElementsByTag("p").text());
 
-		final Elements mainTables = document.select("#principal > table:nth-child(1)");
+		final Elements mainTables = mainPage.select("#principal > table:nth-child(1)");
 		if (mainTables.isEmpty())
 			throw new RuntimeException("Tabela principal não encontrada");
 		final Element mainTable = mainTables.get(0);
@@ -380,14 +376,12 @@ public class HtmlParser {
 		cnpj.setSituacaoEspecial(situacaoEspecial);
 	}
 
-	private static void parseQsaPage(Cnpj cnpj, String qsaPage) {
-		if (qsaPage == null || "".equals(qsaPage))
+	private static void parseQsaPage(Cnpj cnpj, Document qsaPage) {
+		if (qsaPage == null)
 			return;
 
-		final Document document = Jsoup.parse(qsaPage);
-
 		// capital social
-		final Element capital = document.getElementById("capital");
+		final Element capital = qsaPage.getElementById("capital");
 		Elements children = capital.children();
 		if (children.size() != 3)
 			throw new RuntimeException("Capital social em formato inesperado (1)");
@@ -400,7 +394,7 @@ public class HtmlParser {
 		cnpj.setCapitalSocial(parseBigDecimal(capitalSocial));
 
 		// sócios
-		final Elements socios = document.getElementsByClass("alert alert-warning");
+		final Elements socios = qsaPage.getElementsByClass("alert alert-warning");
 		if (socios.isEmpty())
 			return;
 		socios.forEach(o -> {
