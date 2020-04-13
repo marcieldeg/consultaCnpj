@@ -99,28 +99,32 @@ public class CnpjService {
 	 * @throws IOException
 	 */
 	public SearchResult searchAll(String root) throws IOException {
-		if (root == null || !root.matches("^[0-9]{8}$"))
-			throw new RuntimeException("Informe a raiz do CNPJ (os 8 primeiros caracteres)");
-
-		final Map<String, Cnpj> result = new HashMap<>();
-		
-		// consulta matriz
-		final String matriz = Utils.geraCnpj(root, 1);
 		try {
-			result.put(matriz, searchFirst(matriz));
-		} catch (InscricaoNaoEncontradaException e) {
-			return SearchResult.error(e.getMessage());
-		}
+			if (root == null || !root.matches("^[0-9]{8}$"))
+				throw new RuntimeException("Informe a raiz do CNPJ (os 8 primeiros caracteres)");
 
-		// consulta filiais
-		for (int i = 2; i < 10000; i++)
+			final Map<String, Cnpj> result = new HashMap<>();
+			
+			// consulta matriz
+			final String matriz = Utils.geraCnpj(root, 1);
 			try {
-				final String filial = Utils.geraCnpj(root, i);
-				result.put(filial, searchNext(filial));
+				result.put(matriz, searchFirst(matriz));
 			} catch (InscricaoNaoEncontradaException e) {
-				break;
+				return SearchResult.error(e.getMessage());
 			}
 
-		return SearchResult.success(result);
+			// consulta filiais
+			for (int i = 2; i < 10000; i++)
+				try {
+					final String filial = Utils.geraCnpj(root, i);
+					result.put(filial, searchNext(filial));
+				} catch (InscricaoNaoEncontradaException e) {
+					break;
+				}
+
+			return SearchResult.success(result);
+		} catch (Exception e) {
+			return SearchResult.error(e.getMessage());
+		}
 	}
 }
