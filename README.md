@@ -1,6 +1,8 @@
 # consultaCnpj
 Consulta CNPJ diretamente ao site da Receita.
 
+Retorna todas as informações disponíveis no site, inclusive QSA, Capital Social e um PDF da página para arquivamento.
+
 Exemplo de retorno:
 <pre>
 {
