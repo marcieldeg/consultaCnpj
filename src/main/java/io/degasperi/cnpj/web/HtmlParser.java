@@ -193,7 +193,7 @@ public class HtmlParser {
 			throw new RuntimeException("Linha 6 / Campo 1 com elemento inesperado (" + natJur.title + ")");
 		if (natJur.values.size() != 1)
 			throw new RuntimeException("Linha 6 / Campo 1 em formato inesperado");
-		cnpj.setNaturezaJuridica(parseNatJur(ativPrinc.values.get(0)));
+		cnpj.setNaturezaJuridica(parseNatJur(natJur.values.get(0)));
 
 		final Endereco endereco = new Endereco();
 		/* tables(7) -> logradouro / número / complemento */
