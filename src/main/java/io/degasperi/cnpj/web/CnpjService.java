@@ -34,9 +34,6 @@ public class CnpjService {
 	}
 
 	private Cnpj searchFirst(String inscricao) throws InscricaoNaoEncontradaException, IOException {
-		if (inscricao == null || !inscricao.matches("^[0-9]{14}$"))
-			throw new RuntimeException("Informe o CNPJ corretamente (14 números, sem separadores)");
-
 		// início
 		cookies = Jsoup.connect(URL_INICIO).execute().cookies();
 
@@ -82,10 +79,13 @@ public class CnpjService {
 	 * @throws ClientProtocolException
 	 * @throws IOException
 	 */
-	public SearchResult search(String inscricao) throws IOException {
+	public SearchResult search(String inscricao) {
 		try {
+			if (inscricao == null || !inscricao.matches("^[0-9]{14}$"))
+				throw new Exception("Informe o CNPJ corretamente (14 números, sem separadores)");
+			
 			return SearchResult.success(searchFirst(inscricao));
-		} catch (InscricaoNaoEncontradaException e) {
+		} catch (Exception e) {
 			return SearchResult.error(e.getMessage());
 		}
 	}
@@ -98,10 +98,10 @@ public class CnpjService {
 	 * @throws ClientProtocolException
 	 * @throws IOException
 	 */
-	public SearchResult searchAll(String root) throws IOException {
+	public SearchResult searchAll(String root) {
 		try {
 			if (root == null || !root.matches("^[0-9]{8}$"))
-				throw new RuntimeException("Informe a raiz do CNPJ (os 8 primeiros caracteres)");
+				throw new Exception("Informe a raiz do CNPJ (os 8 primeiros caracteres)");
 
 			final Map<String, Cnpj> result = new HashMap<>();
 			

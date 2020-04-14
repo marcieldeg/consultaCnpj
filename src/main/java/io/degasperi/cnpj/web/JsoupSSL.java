@@ -15,10 +15,12 @@ import org.jsoup.Jsoup;
 
 public class JsoupSSL {
 	public static Connection connect(String url) {
-		return Jsoup.connect(url).sslSocketFactory(JsoupSSL.socketFactory());
+		return Jsoup.connect(url).sslSocketFactory(SOCKET_FACTORY);
 	}
 
-	private static SSLSocketFactory socketFactory() {
+	private static final SSLSocketFactory SOCKET_FACTORY;
+
+	static {
 		final TrustManager[] trustAllCerts = new TrustManager[] { new X509TrustManager() {
 			public X509Certificate[] getAcceptedIssuers() {
 				return new X509Certificate[0];
@@ -34,7 +36,7 @@ public class JsoupSSL {
 		try {
 			final SSLContext sslContext = SSLContext.getInstance("SSL");
 			sslContext.init(null, trustAllCerts, new SecureRandom());
-			return sslContext.getSocketFactory();
+			SOCKET_FACTORY = sslContext.getSocketFactory();
 		} catch (NoSuchAlgorithmException | KeyManagementException e) {
 			throw new RuntimeException("Failed to create a SSL socket factory", e);
 		}
