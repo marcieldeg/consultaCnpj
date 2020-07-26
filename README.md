@@ -3,6 +3,8 @@ Consulta CNPJ diretamente ao site da Receita.
 
 Retorna todas as informações disponíveis no site, inclusive QSA, Capital Social e um PDF da página para arquivamento.
 
+Também permite que se consulte todas as filiais, informando a raiz do CNPJ (8 primeiros dígitos).
+
 Exemplo de retorno:
 <pre>
 {
