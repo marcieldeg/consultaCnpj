@@ -6,7 +6,7 @@ Retorna todas as informações disponíveis no site, inclusive QSA, Capital Soci
 Também permite que se consulte todas as filiais, informando a raiz do CNPJ (8 primeiros dígitos).
 
 Exemplo de retorno:
-<pre>
+```json
 {
 	"status": "SUCCESS",
 	"message": "OK",
@@ -62,4 +62,4 @@ Exemplo de retorno:
 		}
 	}
 }
-</pre>
+```
